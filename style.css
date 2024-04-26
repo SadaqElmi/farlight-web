@@ -1,0 +1,993 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  overflow-x: none;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+header .close {
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 50px;
+  display: none;
+}
+.logo img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+nav ul li {
+  list-style: none;
+  position: relative;
+}
+nav ul li::after {
+  position: absolute;
+  content: "";
+  background-color: rgb(255, 166, 0);
+  height: 2px;
+  width: 0%;
+  bottom: -6px;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+nav ul li:hover::after {
+  width: 100%;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 166, 0);
+  font-size: 20px;
+}
+.left-head .show {
+  background-color: rgb(255, 166, 0);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.left-head a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: rgb(255, 166, 0);
+}
+.bar {
+  font-size: 40px;
+  margin-left: 15px;
+}
+.show-login {
+  background-color: black;
+  color: rgb(255, 166, 0);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.left-head i {
+  color: rgb(255, 166, 0);
+  cursor: pointer;
+  padding-left: 5px;
+  display: none;
+}
+
+/* "sing-up */
+.sing-up {
+  background-color: white;
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 90px;
+  left: 25pc;
+  border-radius: 5px;
+  display: none;
+}
+.sing-up i {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.sing-up h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+.sing-up h4 {
+  text-align: center;
+  margin-top: 8px;
+}
+form input {
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  outline: none;
+  padding-left: 5px;
+}
+
+form button {
+  background-color: rgb(255, 166, 0);
+  width: 90%;
+  margin-top: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-left: 20px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* login */
+
+.login {
+  background-color: white;
+  width: 350px;
+  height: 300px;
+  position: absolute;
+  top: 100px;
+  left: 30pc;
+  border-radius: 5px;
+  display: none;
+}
+.login input {
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  outline: none;
+  padding-left: 5px;
+}
+.login button {
+  background-color: rgb(255, 166, 0);
+  width: 90%;
+  margin-top: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-left: 20px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.login h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.login span {
+  margin-left: 70px;
+}
+
+.login i {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* main  */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main video {
+  width: 650px;
+  height: 400px;
+  object-fit: cover;
+}
+.contnt-here {
+  width: 400px;
+}
+.contnt-here span {
+  color: rgb(255, 166, 0);
+  text-decoration: underline;
+}
+.contnt-here h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contnt-here h4 {
+  color: rgb(255, 166, 0);
+  font-size: 25px;
+  font-family: cursive;
+}
+.contnt-here p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+}
+
+.contnt-here button {
+  background-color: rgb(255, 166, 0);
+  margin-top: 10px;
+  padding: 15px 10px;
+  cursor: pointer;
+  margin-left: 20px;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contnt-here button i {
+  font-size: 20px;
+  padding-right: 5px;
+}
+.contnt-here button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* about game  */
+.About {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.About img {
+  width: 600px;
+  height: 450px;
+  object-fit: contain;
+}
+.About-text {
+  width: 400px;
+}
+.About-text h1 {
+  color: rgb(255, 166, 0);
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.About-text h3 {
+  font-size: 45px;
+  color: white;
+}
+.About-text span {
+  color: rgb(255, 166, 0);
+}
+.About-text button {
+  border: 2px solid rgb(255, 166, 0);
+  background-color: transparent;
+  margin-top: 10px;
+  padding: 15px 10px;
+  cursor: pointer;
+  margin-left: 20px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.About-text button:hover {
+  color: white;
+  z-index: 2;
+}
+.About-text button::after {
+  position: absolute;
+  content: "";
+  width: 120%;
+  height: 200%;
+  left: -5px;
+  top: -19px;
+  background-color: rgb(255, 166, 0);
+  cursor: pointer;
+  transform: rotate(160deg);
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.About-text button:hover::after {
+  width: 0%;
+}
+
+/* battlePass */
+.battlePass {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.battlePass img {
+  width: 650px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.battle-text {
+  width: 400px;
+}
+
+.battle-text h1 {
+  color: rgb(255, 166, 0);
+  font-size: 40px;
+}
+.battle-text p {
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
+}
+.battle-text span {
+  color: rgb(255, 166, 0);
+  text-decoration: underline;
+}
+.battle-text button {
+  border: 2px solid rgb(255, 166, 0);
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 15px 10px;
+  cursor: pointer;
+
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.battle-text button:hover {
+  color: white;
+  z-index: 2;
+}
+.battle-text button::after {
+  position: absolute;
+  content: "";
+  width: 120%;
+  height: 200%;
+  left: -5px;
+  top: -19px;
+  background-color: rgb(255, 166, 0);
+  cursor: pointer;
+  transform: rotate(160deg);
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.battle-text button:hover::after {
+  width: 0%;
+}
+
+/* .Mobile-text */
+.MoblieAndPc {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.Mobile-text {
+  width: 400px;
+}
+
+.MoblieAndPc img {
+  width: 650px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.Mobile-text h1 {
+  color: rgb(255, 166, 0);
+}
+
+.Mobile-text p {
+  color: white;
+}
+
+.Mobile-text button {
+  border: 2px solid rgb(255, 166, 0);
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 15px 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.Mobile-text button:hover {
+  color: black;
+  z-index: 2;
+}
+.Mobile-text button::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 200%;
+  left: -5px;
+  top: -19px;
+  background-color: rgb(255, 166, 0);
+  cursor: pointer;
+  transform: rotate(160deg);
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.Mobile-text button:hover::after {
+  width: 120%;
+}
+
+.Mobile-text h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.Mobile-text p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* heroes  */
+
+.heroes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.heroes h1 {
+  color: rgb(255, 166, 0);
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.splide__slide img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
+.splide {
+  background-color: white;
+  overflow: hidden;
+  padding-bottom: 50px;
+  width: 400px;
+  height: 450px;
+}
+
+.splide__list li {
+  padding-right: 50px;
+}
+
+.hero-text {
+  width: 400px;
+}
+.hero-text span {
+  color: white;
+}
+.hero-text p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.hero-text h3 {
+  color: rgb(255, 166, 0);
+  margin: 20px 0;
+}
+
+.hero-text button {
+  border: 2px solid rgb(255, 166, 0);
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 15px 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text button:hover {
+  color: black;
+  z-index: 2;
+}
+.hero-text button::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 200%;
+  right: -10px;
+  top: -19px;
+  background-color: rgb(255, 166, 0);
+  cursor: pointer;
+  transform: rotate(160deg);
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.hero-text button:hover::after {
+  width: 120%;
+}
+
+/* Tdm  */
+
+.tdm {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.tdm img {
+  width: 650px;
+  height: 400px;
+  object-fit: contain;
+}
+.tdm-text {
+  width: 400px;
+}
+.tdm-text h1 {
+  color: rgb(255, 166, 0);
+  font-size: 35px;
+}
+.tdm-text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 20px 0;
+}
+
+.tdm-text a {
+  padding-top: 50px;
+  border: 2px solid rgb(255, 166, 0);
+  background-color: rgb(255, 166, 0);
+  margin-top: 20px;
+  padding: 15px 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+.tdm-text a:hover {
+  color: white;
+  background-color: black;
+}
+
+/* <!-- information  -->  */
+
+.infromation h1 {
+  color: rgb(255, 166, 0);
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card {
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5 ease-in-out;
+  cursor: pointer;
+}
+.card img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-text {
+  background-color: rgb(255, 166, 0);
+  position: absolute;
+  bottom: -200px;
+  height: 0%;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.title-card {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.card:hover .card-text {
+  height: 100%;
+  bottom: -60px;
+}
+
+/* download */
+
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  gap: 50px;
+}
+.download img {
+  width: 600px;
+  height: 450px;
+  object-fit: contain;
+}
+
+.download a {
+  color: rgb(255, 166, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+/* footer  */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+footer hr {
+  width: 100%;
+  background-color: rgb(255, 166, 0);
+}
+.footer-logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+footer h2 {
+  color: rgb(255, 166, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.icon {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+.icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.contect-footer {
+  display: flex;
+  color: rgb(255, 166, 0);
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contect-footer h1 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+/* Responsive Mobile  */
+
+@media only screen and (max-width: 600px) {
+  header .close {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    right: 55px;
+    font-size: 50px;
+    display: none;
+    color: rgb(255, 166, 0);
+    transition: all 0.2s ease-in;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background-color: black;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow-x: none;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  nav {
+    position: absolute;
+    top: 15px;
+    right: -100%;
+    width: 100%;
+    background-color: rgb(27, 26, 26);
+    z-index: 1;
+    padding: 10px 10px;
+    transition: all 0.5s;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li a {
+    color: white;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5pc;
+  }
+
+  .left-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .left-head button {
+    margin: 0;
+    padding: 0 5px;
+    font-size: 10px;
+  }
+  .left-head a {
+    margin: 0;
+    font-size: 10px;
+  }
+  .contnt-here {
+    width: 100%;
+  }
+  .contnt-here h4 {
+    font-size: 20px;
+    margin-left: 8px;
+    margin-top: 20px;
+  }
+  .contnt-here h1 {
+    font-size: 20px;
+    margin-left: 8px;
+  }
+  .contnt-here p {
+    font-size: 10px;
+    margin-left: 6px;
+  }
+  .contnt-here button {
+    padding: 5px 8px;
+    border-radius: 5px;
+  }
+  main video {
+    width: 95%;
+  }
+
+  /* about  */
+  .About {
+    display: flex;
+    flex-direction: column;
+  }
+  .About img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+  }
+  .About-text {
+    width: 100%;
+  }
+  .About-text h1 {
+    font-size: 35px;
+    margin-left: 9px;
+  }
+  .About-text h3 {
+    font-size: 30px;
+    margin-left: 9px;
+  }
+  .About-text button {
+    margin-left: 9px;
+  }
+
+  /* battlePass */
+  .battlePass {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .battle-text {
+    width: 100%;
+  }
+  .battle-text h1 {
+    font-size: 35px;
+    margin-left: 5px;
+  }
+  .battle-text p {
+    font-size: 20px;
+    margin-left: 8px;
+  }
+  .battle-text button {
+    margin-left: 8px;
+  }
+
+  .battlePass img {
+    width: 380px;
+    height: 350px;
+    object-fit: contain;
+  }
+  .MoblieAndPc {
+    display: flex;
+    flex-direction: column;
+  }
+  .MoblieAndPc img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+  }
+  .Mobile-text {
+    width: 100%;
+  }
+  .Mobile-text h1 {
+    font-size: 35px;
+    margin-left: 5px;
+  }
+  .Mobile-text p {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  .Mobile-text button {
+    margin-left: 8px;
+  }
+
+  /* heroes  */
+  .heroes {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-text {
+    width: 100%;
+  }
+  .hero-text h1,
+  p,
+  button {
+    margin-left: 7px;
+  }
+  .hero-text h3 {
+    margin-left: 8px;
+  }
+  .splide__slide img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+  }
+  .splide {
+    background-color: white;
+    overflow: hidden;
+    padding-bottom: 50px;
+    width: 350px;
+    height: 450px;
+  }
+
+  .splide__list li {
+    padding-right: 50px;
+  }
+  /* tdm   */
+
+  .tdm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tdm img {
+    width: 380px;
+    height: 350px;
+    object-fit: contain;
+  }
+  .tdm-text {
+    width: 100%;
+  }
+  .tdm-text h1 {
+    margin-left: 8px;
+  }
+  .tdm-text p {
+    margin-left: 8px;
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  .tdm-text a {
+    margin-left: 10px;
+  }
+  /* infromation */
+  .card-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* download */
+  .download {
+    display: flex;
+    flex-direction: column;
+  }
+  .download img {
+    width: 380px;
+    height: 350px;
+    object-fit: contain;
+  }
+
+  /* footer */
+  footer h2 {
+    font-size: 15px;
+    margin-left: 9px;
+  }
+  .contect-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* sing-up */
+  .sing-up {
+    top: 100px;
+    left: 20px;
+    width: 360px;
+  }
+  .login {
+    top: 100px;
+    left: 20px;
+    width: 360px;
+  }
+  .left-head i {
+    display: block;
+  }
+}
